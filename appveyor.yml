@@ -34,7 +34,9 @@ init:
   - npm -v
   - node -v
   - npm cache clean
+  - echo %PATH%
   - SET PATH=%POSTGRES_PATH%\bin;%MYSQL_PATH%\bin;%PATH%
+  - echo %PATH%
 
 test: false
 
@@ -46,6 +48,7 @@ build_script:
   - createdb sqlectron
   - psql -d sqlectron -a -f spec/databases/postgresql/schema/schema.sql
   # mysql
+  - echo %PATH%
   - mysql -e "drop database test; create database sqlectron;" --user=root
   - mysql sqlectron < spec/databases/mysql/schema/schema.sql --user=root
   # sqlserver
