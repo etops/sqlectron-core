@@ -35,6 +35,8 @@ init:
   - node -v
   - npm cache clean
   - echo %PATH%
+  - dir %MYSQL_PATH%
+  - dir %MYSQL_PATH%\bin
   - SET PATH=%MYSQL_PATH%\bin;%PATH%
   - SET PATH=%POSTGRES_PATH%\bin;%PATH%
   - echo %PATH%
