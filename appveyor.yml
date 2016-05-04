@@ -35,6 +35,9 @@ init:
   - node -v
   - npm cache clean
   - echo %PATH%
+  - dir C:\
+  - dir C:\Program Files
+  - dir C:\Program Files\MySql
   - dir C:\Program Files\MySql\MySQL Server 5.6
   - dir C:\Program Files\MySql\MySQL Server 5.6\bin
   - dir %MYSQL_PATH%
