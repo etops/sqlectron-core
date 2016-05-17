@@ -1,7 +1,7 @@
 import mysql from './mysql';
 import postgresql from './postgresql';
 import sqlserver from './sqlserver';
-
+import couchbase from './couchbase';
 
 /**
  * List of supported database clients
@@ -23,6 +23,12 @@ export const CLIENTS = [
     name: 'Microsoft SQL Server',
     defaultPort: 1433,
   },
+  {
+    key: 'couchbase',
+    name: 'Couchbase',
+    defaultDatabase: 'default',
+    defaultPort: 8091,
+  }
 ];
 
 
@@ -30,4 +36,5 @@ export default {
   mysql,
   postgresql,
   sqlserver,
+  couchbase,
 };
